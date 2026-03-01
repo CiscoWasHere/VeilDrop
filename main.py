@@ -1,9 +1,3 @@
-https://docs.google.com/document/d/1OOqY4KuTFqOFsgJlSk5tdCqwYFr3cLgx0luJPuU_3Tk/edit?usp=sharing
-
-
-
-
-
 ======================================================
 from scapy.all import ARP, Ether, srp, conf
 import ipaddress
