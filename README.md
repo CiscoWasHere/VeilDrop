@@ -19,18 +19,17 @@ pip install --user netifaces
 Clone ou copie o arquivo veildrop.py, dá permissão de execução e já era.
 bash
 
-chmod +x veildrop.py
+    chmod +x veildrop.py
 
-Usar
+# Usar
 
-    Somente reconhecimento (scan silencioso)
-    bash
+Somente reconhecimento (scan silencioso)
 
-sudo python3 veildrop.py
+    sudo python3 veildrop.py
 
 Gera ips.txt com a lista de máquinas ativas e para por aí.
 
-Reconhecimento + ataque
+# Reconhecimento + ataque
 O mesmo comando acima, mas sem cortar com CTRL+C, mantém o spoof ativo pra sempre.
 Quando quiser parar, CTRL+C mata todos os processos arpspoof automaticamente.
 
@@ -39,9 +38,9 @@ bash
 
     sudo VEIL_IFACE=eth0 python3 veildrop.py
 
-    Se quiser forçar placa de rede, exporte a variável.
+Se quiser forçar placa de rede, exporte a variável.
 
-Como funciona
+# Como funciona
 
     Manda um ARP-who-has para cada endereço da sub-rede local.
     Guarda quem respondeu, filtra seu próprio IP, gateway e broadcast.
@@ -50,7 +49,7 @@ Como funciona
 
     arpspoof -i iface -t <host> <gateway>
 
-    Isso faz o host acreditar que o seu notebook é o roteador, e o roteador acreditar que você é o host.
+Isso faz o host acreditar que o seu notebook é o roteador, e o roteador acreditar que você é o host.
     Tráfego passa por você – stage perfeito para sniffers, proxy ou qualquer outra brincadeira.
 
 Saída padrão
@@ -60,9 +59,9 @@ Escaneando rede: 192.168.1.0/24 na interface wlan0...
 7 hosts ativos salvos em ips.txt
 ARP spoofing iniciado em todos os hosts. Pressione CTRL+C para parar.
 
-Detalhes rápidos
+# Detalhes rápidos
 
-    Não precisa de arquivo de config.
-    Trava o sinal SIGINT (CTRL+C) pra dar cleanup certinho.
-    Compatível com Python 3.7+.
-    Testado em Wi-Fi doméstico, cabo de academia e laboratório – mesma lógica, qualquer LAN comum.
+Não precisa de arquivo de config.
+Trava o sinal SIGINT (CTRL+C) pra dar cleanup certinho.
+Compatível com Python 3.7+.
+Testado em Wi-Fi doméstico, cabo de academia e laboratório – mesma lógica, qualquer LAN comum.
