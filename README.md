@@ -1,7 +1,7 @@
 # VeilDrop
 
-Pequeno utilitário que “joga o véu” sobre a LAN: descobre todos os hosts em segundos e, se quiser, assume o controle do tráfego com ARP-spoof em lote.  
-Nada de interface gráfica, nem dependências pesadas – só Python 3, Scapy e o binário `arpspoof` do pacote **dsniff**.
+Pequena ferramenta que “joga o véu” sobre a LAN: descobre todos os hosts em segundos e, se quiser, assume o controle do tráfego com ARP-spoof em lote. (verificação no Wireshark)  
+Nada de interface gráfica, nem bibliotecas pesadas – só Python 3, Scapy e o binário `arpspoof` do pacote **dsniff**.
 
 ## Instalar
 
